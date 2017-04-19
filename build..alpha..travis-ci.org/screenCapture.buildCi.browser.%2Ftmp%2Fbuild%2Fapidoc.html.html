@@ -1,0 +1,1957 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/crypto-browserify/sha.js">sha.js (v2.4.8)</a>
+</h1>
+<h4>Streamable SHA hashes in pure javascript</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js">module sha.js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.js">
+            function <span class="apidocSignatureSpan">sha.</span>js
+            <span class="apidocSignatureSpan">(algorithm)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.js.hexpp">
+            function <span class="apidocSignatureSpan">sha.js.</span>js.hexpp
+            <span class="apidocSignatureSpan">(buffer, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.js.sha">
+            function <span class="apidocSignatureSpan">sha.js.</span>js.sha
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.js.sha.super_">
+            function <span class="apidocSignatureSpan">sha.js.</span>js.sha.super_
+            <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.js.sha1">
+            function <span class="apidocSignatureSpan">sha.js.</span>js.sha1
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.js.sha224">
+            function <span class="apidocSignatureSpan">sha.js.</span>js.sha224
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.js.sha256">
+            function <span class="apidocSignatureSpan">sha.js.</span>js.sha256
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.js.sha384">
+            function <span class="apidocSignatureSpan">sha.js.</span>js.sha384
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.js.sha512">
+            function <span class="apidocSignatureSpan">sha.js.</span>js.sha512
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha1">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha1
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha224">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha224
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha256">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha256
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha384">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha384
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha512">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha512
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sha.js.</span>js.sha.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sha.js.</span>js.sha.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sha.js.</span>js.sha1.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sha.js.</span>js.sha224.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sha.js.</span>js.sha256.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sha.js.</span>js.sha384.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sha.js.</span>js.sha512.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.hexpp">module sha.js.hexpp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.hexpp.hexpp">
+            function <span class="apidocSignatureSpan">sha.js.</span>hexpp
+            <span class="apidocSignatureSpan">(buffer, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.hexpp.defaults">
+            function <span class="apidocSignatureSpan">sha.js.hexpp.</span>defaults
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha">module sha.js.sha</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha.sha">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha.super_">
+            function <span class="apidocSignatureSpan">sha.js.sha.</span>super_
+            <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha.prototype">module sha.js.sha.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha.prototype._hash">
+            function <span class="apidocSignatureSpan">sha.js.sha.prototype.</span>_hash
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha.prototype._update">
+            function <span class="apidocSignatureSpan">sha.js.sha.prototype.</span>_update
+            <span class="apidocSignatureSpan">(M)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha.prototype.init">
+            function <span class="apidocSignatureSpan">sha.js.sha.prototype.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha.super_">module sha.js.sha.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha.super_.super_">
+            function <span class="apidocSignatureSpan">sha.js.sha.</span>super_
+            <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha.super_.prototype">module sha.js.sha.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha.super_.prototype._update">
+            function <span class="apidocSignatureSpan">sha.js.sha.super_.prototype.</span>_update
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha.super_.prototype.digest">
+            function <span class="apidocSignatureSpan">sha.js.sha.super_.prototype.</span>digest
+            <span class="apidocSignatureSpan">(enc)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha.super_.prototype.update">
+            function <span class="apidocSignatureSpan">sha.js.sha.super_.prototype.</span>update
+            <span class="apidocSignatureSpan">(data, enc)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha1">module sha.js.sha1</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha1.sha1">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha1
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha1.super_">
+            function <span class="apidocSignatureSpan">sha.js.sha1.</span>super_
+            <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha1.prototype">module sha.js.sha1.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha1.prototype._hash">
+            function <span class="apidocSignatureSpan">sha.js.sha1.prototype.</span>_hash
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha1.prototype._update">
+            function <span class="apidocSignatureSpan">sha.js.sha1.prototype.</span>_update
+            <span class="apidocSignatureSpan">(M)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha1.prototype.init">
+            function <span class="apidocSignatureSpan">sha.js.sha1.prototype.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha224">module sha.js.sha224</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha224.sha224">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha224
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha224.super_">
+            function <span class="apidocSignatureSpan">sha.js.sha224.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha224.prototype">module sha.js.sha224.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha224.prototype._hash">
+            function <span class="apidocSignatureSpan">sha.js.sha224.prototype.</span>_hash
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha224.prototype.init">
+            function <span class="apidocSignatureSpan">sha.js.sha224.prototype.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha256">module sha.js.sha256</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha256.sha256">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha256
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha256.super_">
+            function <span class="apidocSignatureSpan">sha.js.sha256.</span>super_
+            <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha256.prototype">module sha.js.sha256.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha256.prototype._hash">
+            function <span class="apidocSignatureSpan">sha.js.sha256.prototype.</span>_hash
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha256.prototype._update">
+            function <span class="apidocSignatureSpan">sha.js.sha256.prototype.</span>_update
+            <span class="apidocSignatureSpan">(M)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha256.prototype.init">
+            function <span class="apidocSignatureSpan">sha.js.sha256.prototype.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha384">module sha.js.sha384</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha384.sha384">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha384
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha384.super_">
+            function <span class="apidocSignatureSpan">sha.js.sha384.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha384.prototype">module sha.js.sha384.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha384.prototype._hash">
+            function <span class="apidocSignatureSpan">sha.js.sha384.prototype.</span>_hash
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha384.prototype.init">
+            function <span class="apidocSignatureSpan">sha.js.sha384.prototype.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha512">module sha.js.sha512</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha512.sha512">
+            function <span class="apidocSignatureSpan">sha.js.</span>sha512
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha512.super_">
+            function <span class="apidocSignatureSpan">sha.js.sha512.</span>super_
+            <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sha.js.sha512.prototype">module sha.js.sha512.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha512.prototype._hash">
+            function <span class="apidocSignatureSpan">sha.js.sha512.prototype.</span>_hash
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha512.prototype._update">
+            function <span class="apidocSignatureSpan">sha.js.sha512.prototype.</span>_update
+            <span class="apidocSignatureSpan">(M)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sha.js.sha512.prototype.init">
+            function <span class="apidocSignatureSpan">sha.js.sha512.prototype.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js" id="apidoc.module.sha.js">module sha.js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.js" id="apidoc.element.sha.js.js">
+        function <span class="apidocSignatureSpan">sha.</span>js
+        <span class="apidocSignatureSpan">(algorithm)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SHA(algorithm) {
+  algorithm = algorithm.toLowerCase()
+
+  var Algorithm = exports[algorithm]
+  if (!Algorithm) throw new Error(algorithm + ' is not supported (we accept pull requests)')
+
+  return new Algorithm()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.js.hexpp" id="apidoc.element.sha.js.js.hexpp">
+        function <span class="apidocSignatureSpan">sha.js.</span>js.hexpp
+        <span class="apidocSignatureSpan">(buffer, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hexpp(buffer, opts) {
+  opts = opts || {}
+  opts.groups = opts.groups || 4
+  opts.wrap = opts.wrap || 16
+  return toHex(buffer, opts.groups, opts.wrap, opts.bigendian, opts.ints)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.js.sha" id="apidoc.element.sha.js.js.sha">
+        function <span class="apidocSignatureSpan">sha.js.</span>js.sha
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.js.sha.super_" id="apidoc.element.sha.js.js.sha.super_">
+        function <span class="apidocSignatureSpan">sha.js.</span>js.sha.super_
+        <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hash(blockSize, finalSize) {
+  this._block = new Buffer(blockSize)
+  this._finalSize = finalSize
+  this._blockSize = blockSize
+  this._len = 0
+  this._s = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.js.sha1" id="apidoc.element.sha.js.js.sha1">
+        function <span class="apidocSignatureSpan">sha.js.</span>js.sha1
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha1() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.js.sha224" id="apidoc.element.sha.js.js.sha224">
+        function <span class="apidocSignatureSpan">sha.js.</span>js.sha224
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha224() {
+  this.init()
+
+  this._w = W // new Array(64)
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.js.sha256" id="apidoc.element.sha.js.js.sha256">
+        function <span class="apidocSignatureSpan">sha.js.</span>js.sha256
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha256() {
+  this.init()
+
+  this._w = W // new Array(64)
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.js.sha384" id="apidoc.element.sha.js.js.sha384">
+        function <span class="apidocSignatureSpan">sha.js.</span>js.sha384
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha384() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 128, 112)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.js.sha512" id="apidoc.element.sha.js.js.sha512">
+        function <span class="apidocSignatureSpan">sha.js.</span>js.sha512
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha512() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 128, 112)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha" id="apidoc.element.sha.js.sha">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha1" id="apidoc.element.sha.js.sha1">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha1
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha1() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha224" id="apidoc.element.sha.js.sha224">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha224
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha224() {
+  this.init()
+
+  this._w = W // new Array(64)
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha256" id="apidoc.element.sha.js.sha256">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha256
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha256() {
+  this.init()
+
+  this._w = W // new Array(64)
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha384" id="apidoc.element.sha.js.sha384">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha384
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha384() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 128, 112)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha512" id="apidoc.element.sha.js.sha512">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha512
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha512() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 128, 112)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.hexpp" id="apidoc.module.sha.js.hexpp">module sha.js.hexpp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.hexpp.hexpp" id="apidoc.element.sha.js.hexpp.hexpp">
+        function <span class="apidocSignatureSpan">sha.js.</span>hexpp
+        <span class="apidocSignatureSpan">(buffer, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hexpp(buffer, opts) {
+  opts = opts || {}
+  opts.groups = opts.groups || 4
+  opts.wrap = opts.wrap || 16
+  return toHex(buffer, opts.groups, opts.wrap, opts.bigendian, opts.ints)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.hexpp.defaults" id="apidoc.element.sha.js.hexpp.defaults">
+        function <span class="apidocSignatureSpan">sha.js.hexpp.</span>defaults
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaults = function (opts) {
+  return function (b) {
+    return hexpp(b, opts)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha" id="apidoc.module.sha.js.sha">module sha.js.sha</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha.sha" id="apidoc.element.sha.js.sha.sha">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha.super_" id="apidoc.element.sha.js.sha.super_">
+        function <span class="apidocSignatureSpan">sha.js.sha.</span>super_
+        <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hash(blockSize, finalSize) {
+  this._block = new Buffer(blockSize)
+  this._finalSize = finalSize
+  this._blockSize = blockSize
+  this._len = 0
+  this._s = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha.prototype" id="apidoc.module.sha.js.sha.prototype">module sha.js.sha.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha.prototype._hash" id="apidoc.element.sha.js.sha.prototype._hash">
+        function <span class="apidocSignatureSpan">sha.js.sha.prototype.</span>_hash
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_hash = function () {
+  var H = new Buffer(20)
+
+  H.writeInt32BE(this._a | 0, 0)
+  H.writeInt32BE(this._b | 0, 4)
+  H.writeInt32BE(this._c | 0, 8)
+  H.writeInt32BE(this._d | 0, 12)
+  H.writeInt32BE(this._e | 0, 16)
+
+  return H
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha.prototype._update" id="apidoc.element.sha.js.sha.prototype._update">
+        function <span class="apidocSignatureSpan">sha.js.sha.prototype.</span>_update
+        <span class="apidocSignatureSpan">(M)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_update = function (M) {
+  var W = this._w
+
+  var a = this._a | 0
+  var b = this._b | 0
+  var c = this._c | 0
+  var d = this._d | 0
+  var e = this._e | 0
+
+  for (var i = 0; i &lt; 16; ++i) W[i] = M.readInt32BE(i * 4)
+  for (; i &lt; 80; ++i) W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16]
+
+  for (var j = 0; j &lt; 80; ++j) {
+    var s = ~~(j / 20)
+    var t = (rotl5(a) + ft(s, b, c, d) + e + W[j] + K[s]) | 0
+
+    e = d
+    d = c
+    c = rotl30(b)
+    b = a
+    a = t
+  }
+
+  this._a = (a + this._a) | 0
+  this._b = (b + this._b) | 0
+  this._c = (c + this._c) | 0
+  this._d = (d + this._d) | 0
+  this._e = (e + this._e) | 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha.prototype.init" id="apidoc.element.sha.js.sha.prototype.init">
+        function <span class="apidocSignatureSpan">sha.js.sha.prototype.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this._a = 0x67452301
+  this._b = 0xefcdab89
+  this._c = 0x98badcfe
+  this._d = 0x10325476
+  this._e = 0xc3d2e1f0
+
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha.super_" id="apidoc.module.sha.js.sha.super_">module sha.js.sha.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha.super_.super_" id="apidoc.element.sha.js.sha.super_.super_">
+        function <span class="apidocSignatureSpan">sha.js.sha.</span>super_
+        <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hash(blockSize, finalSize) {
+  this._block = new Buffer(blockSize)
+  this._finalSize = finalSize
+  this._blockSize = blockSize
+  this._len = 0
+  this._s = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha.super_.prototype" id="apidoc.module.sha.js.sha.super_.prototype">module sha.js.sha.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha.super_.prototype._update" id="apidoc.element.sha.js.sha.super_.prototype._update">
+        function <span class="apidocSignatureSpan">sha.js.sha.super_.prototype.</span>_update
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_update = function () {
+  throw new Error('_update must be implemented by subclass')
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha.super_.prototype.digest" id="apidoc.element.sha.js.sha.super_.prototype.digest">
+        function <span class="apidocSignatureSpan">sha.js.sha.super_.prototype.</span>digest
+        <span class="apidocSignatureSpan">(enc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">digest = function (enc) {
+  // Suppose the length of the message M, in bits, is l
+  var l = this._len * 8
+
+  // Append the bit 1 to the end of the message
+  this._block[this._len % this._blockSize] = 0x80
+
+  // and then k zero bits, where k is the smallest non-negative solution to the equation (l + 1 + k) === finalSize mod blockSize
+  this._block.fill(0, this._len % this._blockSize + 1)
+
+  if (l % (this._blockSize * 8) &gt;= this._finalSize * 8) {
+    this._update(this._block)
+    this._block.fill(0)
+  }
+
+  // to this append the block which is equal to the number l written in binary
+  // TODO: handle case where l is &gt; Math.pow(2, 29)
+  this._block.writeInt32BE(l, this._blockSize - 4)
+
+  var hash = this._update(this._block) || this._hash()
+
+  return enc ? hash.toString(enc) : hash
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+``` js
+var createHash = require('sha.js')
+
+var sha256 = createHash('sha256')
+var sha512 = createHash('sha512')
+
+var h = sha256.update('abc', 'utf8').<span class="apidocCodeKeywordSpan">digest</span>('hex')
+console.log(h) //ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+
+//LEGACY, do not use in new systems:
+var sha0 = createHash('sha')
+var sha1 = createHash('sha1')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha.super_.prototype.update" id="apidoc.element.sha.js.sha.super_.prototype.update">
+        function <span class="apidocSignatureSpan">sha.js.sha.super_.prototype.</span>update
+        <span class="apidocSignatureSpan">(data, enc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (data, enc) {
+  if (typeof data === 'string') {
+    enc = enc || 'utf8'
+    data = new Buffer(data, enc)
+  }
+
+  var l = this._len += data.length
+  var s = this._s || 0
+  var f = 0
+  var buffer = this._block
+
+  while (s &lt; l) {
+    var t = Math.min(data.length, f + this._blockSize - (s % this._blockSize))
+    var ch = (t - f)
+
+    for (var i = 0; i &lt; ch; i++) {
+      buffer[(s % this._blockSize) + i] = data[i + f]
+    }
+
+    s += ch
+    f += ch
+
+    if ((s % this._blockSize) === 0) {
+      this._update(buffer)
+    }
+  }
+  this._s = s
+
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+``` js
+var createHash = require('sha.js')
+
+var sha256 = createHash('sha256')
+var sha512 = createHash('sha512')
+
+var h = sha256.<span class="apidocCodeKeywordSpan">update</span>('abc', 'utf8').digest('hex')
+console.log(h) //ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+
+//LEGACY, do not use in new systems:
+var sha0 = createHash('sha')
+var sha1 = createHash('sha1')
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha1" id="apidoc.module.sha.js.sha1">module sha.js.sha1</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha1.sha1" id="apidoc.element.sha.js.sha1.sha1">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha1
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha1() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha1.super_" id="apidoc.element.sha.js.sha1.super_">
+        function <span class="apidocSignatureSpan">sha.js.sha1.</span>super_
+        <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hash(blockSize, finalSize) {
+  this._block = new Buffer(blockSize)
+  this._finalSize = finalSize
+  this._blockSize = blockSize
+  this._len = 0
+  this._s = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha1.prototype" id="apidoc.module.sha.js.sha1.prototype">module sha.js.sha1.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha1.prototype._hash" id="apidoc.element.sha.js.sha1.prototype._hash">
+        function <span class="apidocSignatureSpan">sha.js.sha1.prototype.</span>_hash
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_hash = function () {
+  var H = new Buffer(20)
+
+  H.writeInt32BE(this._a | 0, 0)
+  H.writeInt32BE(this._b | 0, 4)
+  H.writeInt32BE(this._c | 0, 8)
+  H.writeInt32BE(this._d | 0, 12)
+  H.writeInt32BE(this._e | 0, 16)
+
+  return H
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha1.prototype._update" id="apidoc.element.sha.js.sha1.prototype._update">
+        function <span class="apidocSignatureSpan">sha.js.sha1.prototype.</span>_update
+        <span class="apidocSignatureSpan">(M)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_update = function (M) {
+  var W = this._w
+
+  var a = this._a | 0
+  var b = this._b | 0
+  var c = this._c | 0
+  var d = this._d | 0
+  var e = this._e | 0
+
+  for (var i = 0; i &lt; 16; ++i) W[i] = M.readInt32BE(i * 4)
+  for (; i &lt; 80; ++i) W[i] = rotl1(W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16])
+
+  for (var j = 0; j &lt; 80; ++j) {
+    var s = ~~(j / 20)
+    var t = (rotl5(a) + ft(s, b, c, d) + e + W[j] + K[s]) | 0
+
+    e = d
+    d = c
+    c = rotl30(b)
+    b = a
+    a = t
+  }
+
+  this._a = (a + this._a) | 0
+  this._b = (b + this._b) | 0
+  this._c = (c + this._c) | 0
+  this._d = (d + this._d) | 0
+  this._e = (e + this._e) | 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha1.prototype.init" id="apidoc.element.sha.js.sha1.prototype.init">
+        function <span class="apidocSignatureSpan">sha.js.sha1.prototype.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this._a = 0x67452301
+  this._b = 0xefcdab89
+  this._c = 0x98badcfe
+  this._d = 0x10325476
+  this._e = 0xc3d2e1f0
+
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha224" id="apidoc.module.sha.js.sha224">module sha.js.sha224</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha224.sha224" id="apidoc.element.sha.js.sha224.sha224">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha224
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha224() {
+  this.init()
+
+  this._w = W // new Array(64)
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha224.super_" id="apidoc.element.sha.js.sha224.super_">
+        function <span class="apidocSignatureSpan">sha.js.sha224.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha256() {
+  this.init()
+
+  this._w = W // new Array(64)
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha224.prototype" id="apidoc.module.sha.js.sha224.prototype">module sha.js.sha224.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha224.prototype._hash" id="apidoc.element.sha.js.sha224.prototype._hash">
+        function <span class="apidocSignatureSpan">sha.js.sha224.prototype.</span>_hash
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_hash = function () {
+  var H = new Buffer(28)
+
+  H.writeInt32BE(this._a, 0)
+  H.writeInt32BE(this._b, 4)
+  H.writeInt32BE(this._c, 8)
+  H.writeInt32BE(this._d, 12)
+  H.writeInt32BE(this._e, 16)
+  H.writeInt32BE(this._f, 20)
+  H.writeInt32BE(this._g, 24)
+
+  return H
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha224.prototype.init" id="apidoc.element.sha.js.sha224.prototype.init">
+        function <span class="apidocSignatureSpan">sha.js.sha224.prototype.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this._a = 0xc1059ed8
+  this._b = 0x367cd507
+  this._c = 0x3070dd17
+  this._d = 0xf70e5939
+  this._e = 0xffc00b31
+  this._f = 0x68581511
+  this._g = 0x64f98fa7
+  this._h = 0xbefa4fa4
+
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha256" id="apidoc.module.sha.js.sha256">module sha.js.sha256</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha256.sha256" id="apidoc.element.sha.js.sha256.sha256">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha256
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha256() {
+  this.init()
+
+  this._w = W // new Array(64)
+
+  Hash.call(this, 64, 56)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha256.super_" id="apidoc.element.sha.js.sha256.super_">
+        function <span class="apidocSignatureSpan">sha.js.sha256.</span>super_
+        <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hash(blockSize, finalSize) {
+  this._block = new Buffer(blockSize)
+  this._finalSize = finalSize
+  this._blockSize = blockSize
+  this._len = 0
+  this._s = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha256.prototype" id="apidoc.module.sha.js.sha256.prototype">module sha.js.sha256.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha256.prototype._hash" id="apidoc.element.sha.js.sha256.prototype._hash">
+        function <span class="apidocSignatureSpan">sha.js.sha256.prototype.</span>_hash
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_hash = function () {
+  var H = new Buffer(32)
+
+  H.writeInt32BE(this._a, 0)
+  H.writeInt32BE(this._b, 4)
+  H.writeInt32BE(this._c, 8)
+  H.writeInt32BE(this._d, 12)
+  H.writeInt32BE(this._e, 16)
+  H.writeInt32BE(this._f, 20)
+  H.writeInt32BE(this._g, 24)
+  H.writeInt32BE(this._h, 28)
+
+  return H
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha256.prototype._update" id="apidoc.element.sha.js.sha256.prototype._update">
+        function <span class="apidocSignatureSpan">sha.js.sha256.prototype.</span>_update
+        <span class="apidocSignatureSpan">(M)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_update = function (M) {
+  var W = this._w
+
+  var a = this._a | 0
+  var b = this._b | 0
+  var c = this._c | 0
+  var d = this._d | 0
+  var e = this._e | 0
+  var f = this._f | 0
+  var g = this._g | 0
+  var h = this._h | 0
+
+  for (var i = 0; i &lt; 16; ++i) W[i] = M.readInt32BE(i * 4)
+  for (; i &lt; 64; ++i) W[i] = (gamma1(W[i - 2]) + W[i - 7] + gamma0(W[i - 15]) + W[i - 16]) | 0
+
+  for (var j = 0; j &lt; 64; ++j) {
+    var T1 = (h + sigma1(e) + ch(e, f, g) + K[j] + W[j]) | 0
+    var T2 = (sigma0(a) + maj(a, b, c)) | 0
+
+    h = g
+    g = f
+    f = e
+    e = (d + T1) | 0
+    d = c
+    c = b
+    b = a
+    a = (T1 + T2) | 0
+  }
+
+  this._a = (a + this._a) | 0
+  this._b = (b + this._b) | 0
+  this._c = (c + this._c) | 0
+  this._d = (d + this._d) | 0
+  this._e = (e + this._e) | 0
+  this._f = (f + this._f) | 0
+  this._g = (g + this._g) | 0
+  this._h = (h + this._h) | 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha256.prototype.init" id="apidoc.element.sha.js.sha256.prototype.init">
+        function <span class="apidocSignatureSpan">sha.js.sha256.prototype.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this._a = 0x6a09e667
+  this._b = 0xbb67ae85
+  this._c = 0x3c6ef372
+  this._d = 0xa54ff53a
+  this._e = 0x510e527f
+  this._f = 0x9b05688c
+  this._g = 0x1f83d9ab
+  this._h = 0x5be0cd19
+
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha384" id="apidoc.module.sha.js.sha384">module sha.js.sha384</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha384.sha384" id="apidoc.element.sha.js.sha384.sha384">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha384
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha384() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 128, 112)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha384.super_" id="apidoc.element.sha.js.sha384.super_">
+        function <span class="apidocSignatureSpan">sha.js.sha384.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha512() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 128, 112)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha384.prototype" id="apidoc.module.sha.js.sha384.prototype">module sha.js.sha384.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha384.prototype._hash" id="apidoc.element.sha.js.sha384.prototype._hash">
+        function <span class="apidocSignatureSpan">sha.js.sha384.prototype.</span>_hash
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_hash = function () {
+  var H = new Buffer(48)
+
+  function writeInt64BE (h, l, offset) {
+    H.writeInt32BE(h, offset)
+    H.writeInt32BE(l, offset + 4)
+  }
+
+  writeInt64BE(this._ah, this._al, 0)
+  writeInt64BE(this._bh, this._bl, 8)
+  writeInt64BE(this._ch, this._cl, 16)
+  writeInt64BE(this._dh, this._dl, 24)
+  writeInt64BE(this._eh, this._el, 32)
+  writeInt64BE(this._fh, this._fl, 40)
+
+  return H
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha384.prototype.init" id="apidoc.element.sha.js.sha384.prototype.init">
+        function <span class="apidocSignatureSpan">sha.js.sha384.prototype.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this._ah = 0xcbbb9d5d
+  this._bh = 0x629a292a
+  this._ch = 0x9159015a
+  this._dh = 0x152fecd8
+  this._eh = 0x67332667
+  this._fh = 0x8eb44a87
+  this._gh = 0xdb0c2e0d
+  this._hh = 0x47b5481d
+
+  this._al = 0xc1059ed8
+  this._bl = 0x367cd507
+  this._cl = 0x3070dd17
+  this._dl = 0xf70e5939
+  this._el = 0xffc00b31
+  this._fl = 0x68581511
+  this._gl = 0x64f98fa7
+  this._hl = 0xbefa4fa4
+
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha512" id="apidoc.module.sha.js.sha512">module sha.js.sha512</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha512.sha512" id="apidoc.element.sha.js.sha512.sha512">
+        function <span class="apidocSignatureSpan">sha.js.</span>sha512
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Sha512() {
+  this.init()
+  this._w = W
+
+  Hash.call(this, 128, 112)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha512.super_" id="apidoc.element.sha.js.sha512.super_">
+        function <span class="apidocSignatureSpan">sha.js.sha512.</span>super_
+        <span class="apidocSignatureSpan">(blockSize, finalSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Hash(blockSize, finalSize) {
+  this._block = new Buffer(blockSize)
+  this._finalSize = finalSize
+  this._blockSize = blockSize
+  this._len = 0
+  this._s = 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sha.js.sha512.prototype" id="apidoc.module.sha.js.sha512.prototype">module sha.js.sha512.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha512.prototype._hash" id="apidoc.element.sha.js.sha512.prototype._hash">
+        function <span class="apidocSignatureSpan">sha.js.sha512.prototype.</span>_hash
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_hash = function () {
+  var H = new Buffer(64)
+
+  function writeInt64BE (h, l, offset) {
+    H.writeInt32BE(h, offset)
+    H.writeInt32BE(l, offset + 4)
+  }
+
+  writeInt64BE(this._ah, this._al, 0)
+  writeInt64BE(this._bh, this._bl, 8)
+  writeInt64BE(this._ch, this._cl, 16)
+  writeInt64BE(this._dh, this._dl, 24)
+  writeInt64BE(this._eh, this._el, 32)
+  writeInt64BE(this._fh, this._fl, 40)
+  writeInt64BE(this._gh, this._gl, 48)
+  writeInt64BE(this._hh, this._hl, 56)
+
+  return H
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha512.prototype._update" id="apidoc.element.sha.js.sha512.prototype._update">
+        function <span class="apidocSignatureSpan">sha.js.sha512.prototype.</span>_update
+        <span class="apidocSignatureSpan">(M)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_update = function (M) {
+  var W = this._w
+
+  var ah = this._ah | 0
+  var bh = this._bh | 0
+  var ch = this._ch | 0
+  var dh = this._dh | 0
+  var eh = this._eh | 0
+  var fh = this._fh | 0
+  var gh = this._gh | 0
+  var hh = this._hh | 0
+
+  var al = this._al | 0
+  var bl = this._bl | 0
+  var cl = this._cl | 0
+  var dl = this._dl | 0
+  var el = this._el | 0
+  var fl = this._fl | 0
+  var gl = this._gl | 0
+  var hl = this._hl | 0
+
+  for (var i = 0; i &lt; 32; i += 2) {
+    W[i] = M.readInt32BE(i * 4)
+    W[i + 1] = M.readInt32BE(i * 4 + 4)
+  }
+  for (; i &lt; 160; i += 2) {
+    var xh = W[i - 15 * 2]
+    var xl = W[i - 15 * 2 + 1]
+    var gamma0 = Gamma0(xh, xl)
+    var gamma0l = Gamma0l(xl, xh)
+
+    xh = W[i - 2 * 2]
+    xl = W[i - 2 * 2 + 1]
+    var gamma1 = Gamma1(xh, xl)
+    var gamma1l = Gamma1l(xl, xh)
+
+    // W[i] = gamma0 + W[i - 7] + gamma1 + W[i - 16]
+    var Wi7h = W[i - 7 * 2]
+    var Wi7l = W[i - 7 * 2 + 1]
+
+    var Wi16h = W[i - 16 * 2]
+    var Wi16l = W[i - 16 * 2 + 1]
+
+    var Wil = (gamma0l + Wi7l) | 0
+    var Wih = (gamma0 + Wi7h + getCarry(Wil, gamma0l)) | 0
+    Wil = (Wil + gamma1l) | 0
+    Wih = (Wih + gamma1 + getCarry(Wil, gamma1l)) | 0
+    Wil = (Wil + Wi16l) | 0
+    Wih = (Wih + Wi16h + getCarry(Wil, Wi16l)) | 0
+
+    W[i] = Wih
+    W[i + 1] = Wil
+  }
+
+  for (var j = 0; j &lt; 160; j += 2) {
+    Wih = W[j]
+    Wil = W[j + 1]
+
+    var majh = maj(ah, bh, ch)
+    var majl = maj(al, bl, cl)
+
+    var sigma0h = sigma0(ah, al)
+    var sigma0l = sigma0(al, ah)
+    var sigma1h = sigma1(eh, el)
+    var sigma1l = sigma1(el, eh)
+
+    // t1 = h + sigma1 + ch + K[j] + W[j]
+    var Kih = K[j]
+    var Kil = K[j + 1]
+
+    var chh = Ch(eh, fh, gh)
+    var chl = Ch(el, fl, gl)
+
+    var t1l = (hl + sigma1l) | 0
+    var t1h = (hh + sigma1h + getCarry(t1l, hl)) | 0
+    t1l = (t1l + chl) | 0
+    t1h = (t1h + chh + getCarry(t1l, chl)) | 0
+    t1l = (t1l + Kil) | 0
+    t1h = (t1h + Kih + getCarry(t1l, Kil)) | 0
+    t1l = (t1l + Wil) | 0
+    t1h = (t1h + Wih + getCarry(t1l, Wil)) | 0
+
+    // t2 = sigma0 + maj
+    var t2l = (sigma0l + majl) | 0
+    var t2h = (sigma0h + majh + getCarry(t2l, sigma0l)) | 0
+
+    hh = gh
+    hl = gl
+    gh = fh
+    gl = fl
+    fh = eh
+    fl = el
+    el = (dl + t1l) | 0
+    eh = (dh + t1h + getCarry(el, dl)) | 0
+    dh = ch
+    dl = cl
+    ch = bh
+    cl = bl
+    bh = ah
+    bl = al
+    al = (t1l + t2l) | 0
+    ah = (t1h + t2h + getCarry(al, t1l)) | 0
+  }
+
+  this._al = (this._al + al) | 0
+  this._bl = (this._bl + bl) | 0
+  this._cl = (this._cl + cl) | 0
+  this._dl = (this._dl + dl) | 0
+  this._el = (this._el + el) | 0
+  this._fl = (this._fl + fl) | 0
+  this._gl = (this._gl + gl) | 0
+  this._hl = (this._hl + hl) | 0
+
+  this._ah = (this._ah + ah + getCarry(this._al, al)) | 0
+  this._bh = (this._bh + bh + getCarry(this._bl, bl)) | 0
+  this._ch = (this._ch + ch + getCarry(this._cl, cl)) | 0
+  this._dh = (this._dh + dh + getCarry(this._dl, dl)) | 0
+  this._eh = (this._eh + eh + getCarry(this._el, el)) | 0
+  this._fh = (this._fh + fh + getCarry(this._fl, fl)) | 0
+  this._gh = (this._gh + gh + getCarry(this._gl, gl)) | 0
+  this._hh = (this._hh + hh + getCarry(this._hl, hl)) | 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sha.js.sha512.prototype.init" id="apidoc.element.sha.js.sha512.prototype.init">
+        function <span class="apidocSignatureSpan">sha.js.sha512.prototype.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  this._ah = 0x6a09e667
+  this._bh = 0xbb67ae85
+  this._ch = 0x3c6ef372
+  this._dh = 0xa54ff53a
+  this._eh = 0x510e527f
+  this._fh = 0x9b05688c
+  this._gh = 0x1f83d9ab
+  this._hh = 0x5be0cd19
+
+  this._al = 0xf3bcc908
+  this._bl = 0x84caa73b
+  this._cl = 0xfe94f82b
+  this._dl = 0x5f1d36f1
+  this._el = 0xade682d1
+  this._fl = 0x2b3e6c1f
+  this._gl = 0xfb41bd6b
+  this._hl = 0x137e2179
+
+  return this
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
